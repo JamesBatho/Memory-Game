@@ -9,16 +9,16 @@ let numCards = 10;
 
 // attempt at random colors
 
-// let num = window.prompt("Please enter how many matches you want");
-// numCards = num * 2;
-// const randomColors = [];
-// for (let i = 0; i < numCards / 2; i++) {
-//   let redValue = Math.floor(Math.random() * 255);
-//   let blueValue = Math.floor(Math.random() * 255);
-//   let greenValue = Math.floor(Math.random() * 255);
-//   let randomColor = `rgb(${redValue},${greenValue},${blueValue})`;
-//   randomColors.push(randomColor, randomColor);
-// }
+let num = window.prompt("Please enter how many matches you want");
+numCards = num * 2;
+const randomColors = [];
+for (let i = 0; i < numCards / 2; i++) {
+  let redValue = Math.floor(Math.random() * 255);
+  let blueValue = Math.floor(Math.random() * 255);
+  let greenValue = Math.floor(Math.random() * 255);
+  let randomColor = `rgb(${redValue},${greenValue},${blueValue})`;
+  randomColors.push(randomColor, randomColor);
+}
 
 const COLORS = [
   "red",
@@ -56,8 +56,8 @@ function shuffle(array) {
   return array;
 }
 
-let shuffledColors = shuffle(COLORS);
-// let shuffledRandom = shuffle(randomColors);
+// let shuffledColors = shuffle(COLORS);
+let shuffledRandom = shuffle(randomColors);
 
 // this function loops over the array of colors
 // it creates a new div and gives it a class with the value of the color
@@ -143,9 +143,8 @@ function handleCardClick(event) {
 }
 
 // when the DOM loads
-// createDivsForColors(shuffledRandom);
-createDivsForColors(shuffledColors);
-// createDivsForColors(shuffledRandom);
+// createDivsForColors(shuffledColors);
+createDivsForColors(shuffledRandom);
 
 // Buttons for Starting Game and Resetting
 const startButton = document.createElement("button");
